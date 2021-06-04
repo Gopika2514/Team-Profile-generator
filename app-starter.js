@@ -92,7 +92,7 @@ function appMenu() {
       {
         name:"engineerEmail",
         type:"input",
-        message:"what is the id of the engineerEmail?"
+        message:"what is the email of the engineer?"
       },
       {
         name:"engineerGithub",
@@ -105,6 +105,7 @@ function appMenu() {
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
     ]).then(answers => {
+      console.log(answers);
       const engineer = new Engineer(answers.engineerName, answers.engineeerId, answers.engineerEmail, answers.engineerGithubUsername);
       teamMembers.push(engineer);
       idArray.push(answers.engineerId);
@@ -148,6 +149,7 @@ function appMenu() {
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
     ]).then(answers => {
+      console.log(answers);
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchoolname);
       teamMembers.push(intern);
       idArray.push(answers.internId);
